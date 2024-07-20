@@ -18,11 +18,7 @@ game.Players.PlayerAdded:Connect(function(player)
         player:Kick("Not Whitelisted Broke Nigga")
     else
         print(player.Name .. " has joined the game.")
-        -- Activate loadstring for whitelisted players
-    end
-end)
-
--- Check existing players
+        -- Check existing players
 for _, player in ipairs(game.Players:GetPlayers()) do
     if not isWhitelisted(player) then
         player:Kick("Not Whitelisted")
@@ -574,8 +570,5 @@ end)
 
 game:GetService("RunService").RenderStepped:Connect(UpdateESP)
 
-
-
-
     end
-end
+end)
